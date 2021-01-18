@@ -6,10 +6,6 @@
 		<th>Email</th>
 		<th>CF</th>
 	</tr>
-	<tr *ngFor="let user of users">
-		<td>{{ user.name }}</td>
-		<td>{{ user.lastName }}</td>
-		<td>{{ user.email }}</td>
-		<td>{{ user.cf }}</td>
+	<tr app-user *ngFor="let user of users" [user]="user">
 	</tr>
 </table>
