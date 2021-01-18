@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { UserService } from "./user.service";
 
 @Component({
   selector: "app-users",
@@ -7,24 +8,8 @@ import { Component } from "@angular/core";
 })
 export class UsersComponent {
   title = "Users";
-  users = [
-    {
-      name: "Pippo",
-      lastName: "Pluto",
-      email: "pippo@pluto.com",
-      cf: "PPPPPP11A11A111A"
-    },
-    {
-      name: "Pippo",
-      lastName: "Pluto",
-      email: "pippo@pluto.com",
-      cf: "PPPPPP11A11A111A"
-    },
-    {
-      name: "Pippo",
-      lastName: "Pluto",
-      email: "pippo@pluto.com",
-      cf: "PPPPPP11A11A111A"
-    }
-  ];
+  users = [];
+  constructor(service: UserService) {
+    this.users = service.getUsers();
+  }
 }
