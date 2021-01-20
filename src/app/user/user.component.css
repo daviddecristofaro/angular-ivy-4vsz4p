@@ -3,3 +3,14 @@ td {
   color: blue;
   padding: 10px;
 }
+
+button {
+  padding: 5px;
+  border: 1px solid black;
+  width: 80px;
+}
+
+button.delete {
+  background: white;
+  color: red;
+}
