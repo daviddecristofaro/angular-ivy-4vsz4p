@@ -1,8 +1,9 @@
 import { Injectable } from "@angular/core";
+import { User } from "../interfaces/user.interface";
 
 @Injectable()
 export class UserService {
-  private users = [
+  users: Array<User> = [
     {
       name: "Pippo",
       lastName: "Pluto",
